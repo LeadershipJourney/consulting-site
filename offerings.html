@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Offerings | Yelena Kutikova</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Yelena Kutikova</a>
+      <nav>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="offerings.html" class="active">Offerings</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="offerings-page container">
+    <h1>Offerings</h1>
+    <!-- Offerings Grid -->
+    <div class="offering-grid">
+      <!-- Offering 1 -->
+      <div class="offering-card">
+        <h3>Team Building Experience</h3>
+        <p class="short-desc">A customized session designed to deepen team trust, communication, and collaboration.</p>
+        <button class="learn-more-btn">Learn more</button>
+        <div class="full-desc">
+          <p>Tailored for your team’s unique dynamics, this experiential workshop deepens trust, communication and collaboration. Sessions can be hosted on‑site or offsite and include a pre‑session consultation, all materials, and a post‑session recap. Recommended duration: half‑day (approximately three hours). Suitable for up to 20 participants.</p>
+        </div>
+        <div class="select-offering">
+          <input type="checkbox" id="offering1" class="offering-checkbox" value="Team Building Experience" />
+          <label for="offering1">Select this</label>
+        </div>
+      </div>
+      <!-- Offering 2 -->
+      <div class="offering-card">
+        <h3>DISC‑Based Team Workshop</h3>
+        <p class="short-desc">Interactive team experience using DISC to explore communication styles and team dynamics.</p>
+        <button class="learn-more-btn">Learn more</button>
+        <div class="full-desc">
+          <p>Dive deeper into team communication styles and dynamics with the DISC framework. This interactive session includes individual DISC assessments, team profiles, customized insights and take‑home tools. Recommended as a half‑day experience for teams of up to 20 participants.</p>
+        </div>
+        <div class="select-offering">
+          <input type="checkbox" id="offering2" class="offering-checkbox" value="DISC‑Based Team Workshop" />
+          <label for="offering2">Select this</label>
+        </div>
+      </div>
+      <!-- Offering 3 -->
+      <div class="offering-card">
+        <h3>1:1 Coaching (DISC or Strengths)</h3>
+        <p class="short-desc">Personalized coaching focused on self‑awareness, interpersonal effectiveness, and leveraging individual strengths.</p>
+        <button class="learn-more-btn">Learn more</button>
+        <div class="full-desc">
+          <p>Deepen your understanding of yourself and others through individualized coaching. Sessions focus on increasing self‑awareness, improving interpersonal effectiveness and leveraging personal strengths. Includes a DISC or StrengthsFinder assessment, optional 360 insights, and a personalized development plan.</p>
+        </div>
+        <div class="select-offering">
+          <input type="checkbox" id="offering3" class="offering-checkbox" value="1:1 Coaching" />
+          <label for="offering3">Select this</label>
+        </div>
+      </div>
+      <!-- Offering 4 -->
+      <div class="offering-card">
+        <h3>Chameleon Leadership™ Full‑Day Experience</h3>
+        <p class="short-desc">A highly interactive day focused on adaptive leadership, emotional intelligence, and authentic connection.</p>
+        <button class="learn-more-btn">Learn more</button>
+        <div class="full-desc">
+          <p>Designed for people managers, this immersive program develops adaptive leadership and emotional intelligence while driving performance through authentic connection. The full‑day experience includes the Chameleon Leadership assessment, a pre‑session alignment call and an optional follow‑up session.</p>
+        </div>
+        <div class="select-offering">
+          <input type="checkbox" id="offering4" class="offering-checkbox" value="Chameleon Leadership™ Full‑Day Experience" />
+          <label for="offering4">Select this</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="form-section">
+      <h2>Submit Your Selected Offerings</h2>
+      <form id="offerings-form">
+        <label for="name">Name*</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="organization">Organization*</label>
+        <input type="text" id="organization" name="organization" required />
+
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Additional Message (optional)</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit" class="btn">Send My Selections</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Yelena Kutikova. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
