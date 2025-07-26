@@ -87,7 +87,8 @@ nav a:hover {
 /* Hero Section */
 .hero {
   height: 75vh;
-  background-image: url('images/hero.png');
+  /* Use root-level hero image (GitHub Pages stores images at repo root) */
+  background-image: url('hero.png');
   background-size: cover;
   background-position: center;
   display: flex;
