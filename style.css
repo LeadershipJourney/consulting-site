@@ -99,6 +99,15 @@ nav a:hover {
   color: var(--light-text);
 }
 
+/* Center the text vertically within the overlay for more breathing room */
+.hero-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 /* A narrower hero variant used when only the inspirational tagline is shown */
 .hero.hero-narrow {
   height: 45vh;
@@ -193,8 +202,9 @@ nav a:hover {
 }
 
 /* Reduce spacing between About heading and its text */
+/* Tighten spacing below About heading even more */
 .about-section h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .offerings-section {
