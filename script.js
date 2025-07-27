@@ -12,36 +12,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Offerings form submission handler for one-page layout
-  const offeringsForm = document.getElementById('offerings-form');
-  if (offeringsForm) {
-    offeringsForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      // Collect selected offerings from checkboxes
-      const selected = Array.from(document.querySelectorAll('.offering-checkbox:checked')).map(cb => cb.value);
-      if (selected.length === 0) {
-        alert('Please select at least one offering.');
-        return;
+      // Offerings form submission handler for one-page layout
+      // Validate that at least one offering is selected and required fields are
+      // filled. If validation passes, allow the form to submit normally to
+      // FormSubmit (configured via the form's action attribute). Otherwise,
+      // prevent submission and display an alert.
+      const offeringsForm = document.getElementById('offerings-form');
+      if (offeringsForm) {
+        offeringsForm.addEventListener('submit', function (e) {
+          const selected = Array.from(document.querySelectorAll('.offering-checkbox:checked'));
+          const name = document.getElementById('name').value.trim();
+          const email = document.getElementById('email').value.trim();
+          if (selected.length === 0) {
+            e.preventDefault();
+            alert('Please select at least one offering.');
+            return;
+          }
+          if (!name || !email) {
+            e.preventDefault();
+            alert('Please fill out the required fields (Name and Email).');
+            return;
+          }
+          // If validation passes, the form will submit normally, sending data to
+          // FormSubmit for processing and emailing.
+        });
       }
-      // Gather contact information (Name and Email)
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      if (!name || !email) {
-        alert('Please fill out the required fields (Name and Email).');
-        return;
-      }
-      // Construct email body
-      let body = 'Name: ' + name + '\n';
-      body += 'Email: ' + email + '\n';
-      body += 'Selected offerings: ' + selected.join(', ') + '\n';
-      if (message) {
-        body += '\nMessage:\n' + message;
-      }
-      const mailtoLink = 'mailto:lenakut@gmail.com?subject=' + encodeURIComponent('New Inquiry from Your Website') + '&body=' + encodeURIComponent(body);
-      window.location.href = mailtoLink;
-    });
-  }
 
   // Contact page form submission handler
   const contactForm = document.getElementById('contact-form');

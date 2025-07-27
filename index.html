@@ -53,7 +53,7 @@
           </p>
         </div>
       <div class="select-offering">
-        <input type="checkbox" class="offering-checkbox" id="select-customized" value="Customized Leadership Development Program" />
+            <input type="checkbox" class="offering-checkbox" name="offerings[]" id="select-customized" value="Customized Leadership Development Program" />
         <label for="select-customized">Select</label>
       </div>
       </div>
@@ -70,7 +70,7 @@
           </p>
         </div>
       <div class="select-offering">
-        <input type="checkbox" class="offering-checkbox" id="select-team-building" value="Team Building Experience" />
+            <input type="checkbox" class="offering-checkbox" name="offerings[]" id="select-team-building" value="Team Building Experience" />
         <label for="select-team-building">Select</label>
       </div>
       </div>
@@ -86,7 +86,7 @@
           </p>
         </div>
       <div class="select-offering">
-        <input type="checkbox" class="offering-checkbox" id="select-disc-workshop" value="DISC‑Based Team Workshop" />
+            <input type="checkbox" class="offering-checkbox" name="offerings[]" id="select-disc-workshop" value="DISC‑Based Team Workshop" />
         <label for="select-disc-workshop">Select</label>
       </div>
       </div>
@@ -103,7 +103,7 @@
           </p>
         </div>
       <div class="select-offering">
-        <input type="checkbox" class="offering-checkbox" id="select-coaching" value="1:1 Coaching" />
+            <input type="checkbox" class="offering-checkbox" name="offerings[]" id="select-coaching" value="1:1 Coaching (DISC or Gallup Strengths)" />
         <label for="select-coaching">Select</label>
       </div>
       </div>
@@ -120,17 +120,30 @@
           </p>
         </div>
       <div class="select-offering">
-        <input type="checkbox" class="offering-checkbox" id="select-chameleon" value="Chameleon Leadership™ Full‑Day Experience" />
+            <input type="checkbox" class="offering-checkbox" name="offerings[]" id="select-chameleon" value="Chameleon Leadership™ Full‑Day Experience" />
         <label for="select-chameleon">Select</label>
       </div>
       </div>
     </div>
 
-    <!-- Contact form for selected offerings -->
-    <form id="offerings-form" class="form-section">
+        <!-- Contact form for selected offerings -->
+        <!--
+          Use FormSubmit (https://formsubmit.co) to send form submissions directly
+          to the consultant's inbox without requiring visitors to open their email
+          client. The form action posts to FormSubmit with the consultant's
+          address and includes hidden fields to set the email subject and disable
+          the default CAPTCHA. Each offering checkbox uses the name
+          "offerings[]" so multiple selections are captured.
+        -->
+        <form id="offerings-form" class="form-section"
+              action="https://formsubmit.co/lenakut@gmail.com" method="POST">
       <h3 style="margin-bottom:1rem; text-align:center; color: var(--secondary-color);">Submit Your Selections</h3>
       <p style="text-align:center; margin-bottom:1.5rem; font-size:0.95rem; color: var(--secondary-color);">Select the offerings above and tell us a little about yourself. We'll get back to you promptly!</p>
-      <label for="name">Name*</label>
+          <input type="hidden" name="_subject" value="New inquiry from website" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+
+          <label for="name">Name*</label>
       <input type="text" id="name" name="name" required />
 
       <label for="email">Email*</label>
