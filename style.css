@@ -181,6 +181,15 @@ nav a:hover {
   flex: 1 1 300px;
 }
 
+/* Add spacing to sections because the header is fixed and there is no hero section */
+.about-section {
+  padding-top: 6rem;
+}
+
+.offerings-section {
+  padding-top: 3rem;
+}
+
 /* Offerings Page */
 .offerings-page {
   padding-top: 6rem; /* account for fixed header */

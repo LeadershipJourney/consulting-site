@@ -12,29 +12,27 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Offerings form submission handler
+  // Offerings form submission handler for one-page layout
   const offeringsForm = document.getElementById('offerings-form');
   if (offeringsForm) {
     offeringsForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      // Collect selected offerings
+      // Collect selected offerings from checkboxes
       const selected = Array.from(document.querySelectorAll('.offering-checkbox:checked')).map(cb => cb.value);
       if (selected.length === 0) {
         alert('Please select at least one offering.');
         return;
       }
-      // Gather contact information
+      // Gather contact information (Name and Email)
       const name = document.getElementById('name').value.trim();
-      const org = document.getElementById('organization').value.trim();
       const email = document.getElementById('email').value.trim();
       const message = document.getElementById('message').value.trim();
-      if (!name || !org || !email) {
-        alert('Please fill out the required fields (Name, Organization, Email).');
+      if (!name || !email) {
+        alert('Please fill out the required fields (Name and Email).');
         return;
       }
       // Construct email body
       let body = 'Name: ' + name + '\n';
-      body += 'Organization: ' + org + '\n';
       body += 'Email: ' + email + '\n';
       body += 'Selected offerings: ' + selected.join(', ') + '\n';
       if (message) {
