@@ -99,6 +99,11 @@ nav a:hover {
   color: var(--light-text);
 }
 
+/* A narrower hero variant used when only the inspirational tagline is shown */
+.hero.hero-narrow {
+  height: 45vh;
+}
+
 .hero::before {
   content: '';
   position: absolute;
@@ -182,8 +187,14 @@ nav a:hover {
 }
 
 /* Add spacing to sections because the header is fixed and there is no hero section */
+/* Account for fixed header and hero when present */
 .about-section {
-  padding-top: 6rem;
+  padding-top: 4rem;
+}
+
+/* Reduce spacing between About heading and its text */
+.about-section h2 {
+  margin-bottom: 1rem;
 }
 
 .offerings-section {
