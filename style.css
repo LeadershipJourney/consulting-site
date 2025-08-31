@@ -85,10 +85,22 @@ nav a:hover {
 }
 
 /* Hero Section */
+/*
+ * Hero section
+ *
+ * The hero originally used a stylized illustration (hero.png) as its
+ * background. To better reflect the site’s purpose and to reuse the
+ * inspirational mountain image that previously appeared in the About
+ * section, the hero background is now set to mountain.png. The
+ * remaining styling stays the same.  If you wish to adjust the
+ * overlay or text colours later, you can modify the opacity in the
+ * ::before pseudo‑element or tweak the --primary/secondary colours.
+ */
 .hero {
+  /* Reduced height on the home page to create a balanced layout */
   height: 75vh;
-  /* Use root-level hero image (GitHub Pages stores images at repo root) */
-  background-image: url('hero.png');
+  /* Use the inspirational mountain image as the hero background */
+  background-image: url('mountain.png');
   background-size: cover;
   background-position: center;
   display: flex;
