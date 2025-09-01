@@ -249,9 +249,16 @@ nav a:hover {
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 10px var(--card-shadow);
+  /*
+   * Ensure the content inside each offering card is aligned to the top.
+   * Previously the flex container used `justify-content: space-between`,
+   * which distributed space evenly and caused inconsistent spacing.
+   * Switching to `flex-start` top‑aligns all children and prevents
+   * unwanted spacing at the bottom of cards.
+   */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .offering-card h3 {
